@@ -1,0 +1,1 @@
+receive_msg_num, send_msg_num, msg_type, msg_priority, msg_start_time(ts), msg_end_time(ts), msg_trans_time(ns)

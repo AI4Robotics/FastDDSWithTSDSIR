@@ -1,0 +1,16 @@
+struct MsgRGBImage
+{
+    short msg_priority;                     // 消息的优先级
+    unsigned long long msg_sequence_num;    // 消息序列号
+    string msg_type;                        // 消息类型
+    long msg_start_seconds;                 // 消息生成时间
+    unsigned long msg_start_nanosec;
+    long msg_end_seconds;                   // 消息结束时间
+    unsigned long msg_end_nanosec;
+    long msg_trans_time;                    // 消息已传输时间
+    long max_trans_time;                    // 消息最大传输时间
+    boolean is_sent;                        // 是否已发送
+    boolean is_overtime;                    // 是否超时
+    // img数据，RGB 640*480*8B=979200B，图像压缩50% 489600
+    char message[489600];                   // 携带的消息数据
+};
